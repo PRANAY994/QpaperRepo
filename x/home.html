@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #0074D9;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #0074D9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .bu {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0px;
+            overflow: hidden;
+            background-color: rgb(85, 83, 86);
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 16px;
+            text-decoration: none;
+        }
+
+        li {
+            float: left;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s;
+        }
+
+        /* Light mode styles */
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            border-radius: 10px;
+        }
+
+        .select2-container--default .select2-selection--single {
+            background-color: white;
+            /* Replace with your desired background color */
+        }
+
+        .h {
+            width: 190px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            margin: 0 20px;
+            display: inline-block;
+            position: relative;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s;
+            border: none;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            left: 0;
+            bottom: -18px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            float: right;
+            top: 70px;
+
+        }
+        .home {
+            padding-left: 100px; /* Adjust the left padding as needed */
+            padding-right: 100px; /* Adjust the right padding as needed */
+        }
+        .lang {
+            border-radius: 30px;
+            display: block;
+            background-color: rgb(254, 254, 254);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 13px;
+            text-decoration: none;
+            position: relative;
+            bottom: 2px;
+            font-weight: bold;
+
+        }
+        .myhome{
+          height: 700px;
+        }
+        .wits {
+        position: absolute;
+        top: 50%; /* Adjust as needed for vertical positioning */
+        left: 25%; /* Adjust as needed for horizontal positioning */
+        transform: translate(-25%, -50%);
+        background-color:transparent; /* Example background color */
+        padding: 20px; /* Adjust padding as needed */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(0, 0, 0);
+    
+    }
+    .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+            background-color:rgb(255, 255, 255);
+            border-radius: 20px;
+        margin-left:50px;
+        margin-top:30px;
+        margin-right:50px;
+        }
+        .card{
+            height: 365px;
+            width: 335px;
+            padding: 20px 35px;
+            background: #764728;
+            border-radius: 20px;
+            margin: 15px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card i{
+            font-size: 50px;
+            display: block;
+            text-align: center;
+            margin: 25px 0px;
+            color: #0062f4;
+        }
+        h5{
+            color: white;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+        .pra p{
+            color: rgba(251, 251, 251, 0.8);
+            font-size: 16px;
+            line-height: 27px;
+            margin-bottom: 25px;
+        }
+        .card .button{
+            background-color:#0062f4;
+            color: white;
+            text-decoration: none;
+            border: 2px solid transparent;
+            font-weight: bold;
+            padding: 9px 30px;
+            border-radius: 30px;
+            transition: .4s;
+        }
+        .card .button:hover{
+            background-color: transparent;
+            border: 2px solid #0062f4;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="homepage">
+        <div class="navbar">
+            <ul>
+                <li><button class="dark-mode-toggle" onclick="toggleDarkMode()"> Dark Mode</button></li>
+                <li><img src="https://dt19wmazj2dns.cloudfront.net/wp-content/uploads/2023/10/logo.svg" width="200"
+                        height="100" style="padding-left:30px;"></li>
+                <li style="float:right;padding-top:20px;font-size:20px;"><a href="login.html">Sign IN</a></li>
+                <li style="float:right;padding-top:20px;font-size:20px;color: #f8f8f8;"><a href="signup">Contact us</a>
+                </li>
+                <li style="float:right;padding-top:20px;font-size:20px;color: #f8f8f8;"><a href="">About us</a></li>
+                <li style="float:right;padding-top:20px;">
+                    <select class="lang">
+                        <option value="English">English</option>
+                        <option value="Korean">Korean</option>
+                        <option value="UK">UK</option>
+                        <option value="telugu">Telugu</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </section>
+   
+ <section class="home">
+    <div class="myhome">
+        <div class="wits">
+            
+            <h1 style="font-size:50px;">hello,<br> Welcome to Amrita QRepo!</h1>
+            <p style="font-size:30px;font-weight: bolder;">Pave your way to acadameics through Old question papers!!</p>
+        </div><img src="a-level-english-exam-paper-BHGDP0-transformed.jpeg" width="1250px" height="790px" style="padding-left:40px;">
+    </div>
+ </section>
+ <section class="options">
+
+ </section>
+
+ <section>
+    <div class="box">
+        <div class="card">
+            <i class="fa-solid fa-bars"></i>
+            <h5>Explore papers</h5>
+            <div class="pra">
+                <p>Are you a student looking for question papers of amrita and want to know how well u can crack it!!Login right now and explore the papers</p>
+
+                <p style="text-align: center;">
+                    <a class="button" href="login.html">Read More</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="fa-regular fa-user"></i>
+            <h5>Faculty? Add papers</h5>
+            <div class="pra">
+                <p>Faculties of Amrita want to manage question papers click on the button and SIGN In</p>
+
+                <p style="text-align: center;">
+                    <a class="button" href="login.html">Read More</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <i class="fa-regular fa-bell"></i>
+            <h5>NEW?:)</h5>
+            <div class="pra">
+                <p>We extend our warmest greetings to all learners, educators, and curious minds accessing our question paper repository. Here, within these digital corridors, lies a treasure trove of educational resources designed to empower and inspire.</p>
+
+                <p style="text-align: center;">
+                    <a class="button" href="login.html">Read More</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+ </section>
+ <footer>
+    <div style="background-color: #0074D9; color: #fff; text-align: center; padding: 20px;">
+        &copy; 2023 Amrita QRepo. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+
+</html>

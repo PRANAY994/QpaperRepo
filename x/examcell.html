@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #0074D9;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #0074D9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .bu {
+            background-color: #0074D9;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0px;
+            overflow: hidden;
+            background-color: rgb(85, 83, 86);
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 16px;
+            text-decoration: none;
+        }
+
+        li {
+            float: left;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s;
+        }
+
+        /* Light mode styles */
+        .light-mode {
+            background-color: white;
+            color: black;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            top: 5px;
+            right: 10px;
+            border-radius: 10px;
+        }
+
+        .select2-container--default .select2-selection--single {
+            background-color: white;
+            /* Replace with your desired background color */
+        }
+
+        .h {
+            width: 190px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        .navbar ul li {
+            list-style: none;
+            margin: 0 20px;
+            display: inline-block;
+            position: relative;
+
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+            left: 0;
+            bottom: 0;
+            transition: 0.5s;
+            border: none;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+
+        .navbar ul li::after {
+            content: '';
+            height: 3px;
+            width: 0;
+            background: rgb(255, 255, 255);
+            position: absolute;
+            left: 0;
+            bottom: -18px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover::after {
+            width: 100%;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            float: right;
+            top: 70px;
+
+        }
+
+        .lang {
+            border-radius: 30px;
+            display: block;
+            background-color: rgb(254, 254, 254);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 13px;
+            text-decoration: none;
+            position: relative;
+            bottom: 2px;
+            font-weight: bold;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="homepage">
+        <div class="navbar">
+            <ul>
+                <li><button class="dark-mode-toggle" onclick="toggleDarkMode()"> Dark Mode</button></li>
+                <li><img src="https://dt19wmazj2dns.cloudfront.net/wp-content/uploads/2023/10/logo.svg" width="200"
+                        height="100" style="padding-left:30px;"></li>
+                <li style="float:right;padding-top:20px;font-size:20px;"><a href="login.html">Sign IN</a></li>
+                <li style="float:right;padding-top:20px;font-size:20px;color: #f8f8f8;"><a href="signup">Contact us</a>
+                </li>
+                <li style="float:right;padding-top:20px;font-size:20px;color: #f8f8f8;"><a href="">About us</a></li>
+                <li style="float:right;padding-top:20px;">
+                    <select class="lang">
+                        <option value="English">English</option>
+                        <option value="Korean">Korean</option>
+                        <option value="UK">UK</option>
+                        <option value="telugu">Telugu</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div
+        style="position: absolute; top: 110px; left:10px; width: 1200px; padding: 20px;height:750px; background-color:rgb(187, 184, 184); color: black; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        <form action="p3.html" class="form-container">
+            <h2 style="margin-top: 0; font-size: 24px;">Get Question Papers</h2>
+            <label for="pr">DEGREE</label>
+            <p id="pr">
+                <select id="pr_select" style="width:150px;height:30px;border-radius:8px;">
+                    <option value="w" id="usg"></option>
+                    <option value="UG" id="ug">UNDER GRADUATE</option>
+                    <option value="PG" id="pg">POST GRADUATE</option>
+                </select>
+            </p>
+            <label for id="de">
+                PROGRAM
+            </label>
+            <p id="de">
+                <select id="pr_select" style="width:150px;height:30px;border-radius:8px;">
+                    <option value="w" id="usg"></option>
+                    <option value="btech" id="btech">B.TECH</option>
+                    <option value="agri" id="bsc">BSC.Agri</option>
+                    <option value="mass" id="bsc.m">BSC.Mass</option>
+
+                </select>
+            </p>
+            
+                <label for id="sem">
+                    SEMESTER
+                </label>  
+                <p id="de">
+                    <select id="pr_select" style="width:150px;height:30px;border-radius:8px;">
+                        <option value="w" id="usg"></option>
+                        <option value="one" id="one">I</option>
+                        <option value="two" id="two">II</option>
+                        <option value="three" id="three">III</option>
+                        <option value="four" id="four">IV</option>
+                        <option value="five" id="five">V</option>
+                        <option value="six" id="six">VI</option>
+                        <option value="seven" id="seven">VII</option>
+                        <option value="eight" id="eight">VIII</option>
+                    </select>
+                </p>
+
+
+            <label for="course" style="font-size: 18px;">COURSE NAME</label><br>
+            <select id="course" name="course" style="width: 100px; padding: 10px; margin-bottom: 10px; border: none; background-color: #f8f8f8;
+            border-radius: 5px;">
+                <option value="22"></option>
+                <option value="DBMS">DBMS</option>
+                <option value="Digital Electronic Systems">Digital Electronic Systems</option>
+                <option value="Optimization Techniques">Optimization Techniques</option>
+                <option value="Advanced Programming">Advanced Programming</option>
+            </select>
+            <br>
+            <label for="code" style="font-size:18px;">COURSE CODE</label><br>
+            <select id="code" name="code"
+                style="width: 100px; padding: 10px; margin-bottom: 10px; border: none; background-color: #f8f8f8; border-radius: 5px;">>
+                <option value="" disabled selected></option>
+                <option value="19cse201">19cse201</option>
+                <option value="19cse202">19cse202</option>
+                <option value="19cse205">19cse205</option>
+                <option value="19ece284">19ece284</option>
+
+            </select>
+            <br>
+            <label for="year" style="font-size: 14px;">Year</label><br>
+            <input type="number" id="year" name="year" placeholder="Year" required
+                style="width:60; padding: 10px; margin-bottom: 10px; border: none; background-color: #f8f8f8; border-radius: 5px;"><br>
+            <label for="wy1">Difficultiness</label>
+            <input type="radio" name="wy1" value="hi">Easy<input type="radio" name="wy1" value="hi">Medium<input
+                type="radio" name="wy1" value="hi">Hard<br><br>
+                     <button type="submit" class="bu">Search</button><br>
+                     <br>
+                    </form>
+                     <form action="examphp.php" id="abc" method="post">
+                        <p> <b> Enter the Faculty Code</b></p>
+                     <input type="text" name="wer" value="Faculty code">
+                     <!-- <input type="submit" name = "grant-sub"> -->
+                     <button onclick="grantAccess()" class="bu";>Grant Access</button>
+                     </form>
+                     <br><br>
+                      
+                      
+        
+    </div>
+    <div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+            }
+        }
+
+        $(document).ready(function () {
+            $('#code').select2();
+        });
+
+        $(document).ready(function () {
+            $('#course').select2();
+        });
+
+        function grantAccess() {
+    const selectedFaculty = document.getElementById("wer").value;
+    if (selectedFaculty.trim() !== '') {
+        if (selectedFaculty !== 'none') {
+            // Use AJAX to send the faculty code to the server
+            $.ajax({
+                type: "POST",
+                url: "examphp.php",
+                data: {
+                    wer: selectedFaculty
+                },
+                success: function (response) {
+                    // Show a pop-up window with the response message
+                    alert(response);
+                },
+                error: function () {
+                    alert("Error granting access.");
+                }
+            });
+        } else {
+            alert("Please select a valid faculty.");
+        }
+    } else {
+        alert("Please enter a faculty code.");
+    }
+}
+
+    </script>
+</body>
+
+</html>
